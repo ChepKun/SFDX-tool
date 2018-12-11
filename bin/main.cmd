@@ -1,6 +1,8 @@
 :MAIN
 CLS
 
+CD /D %INIT_PATH%
+
 ECHO SFDX tool - Main
 ECHO.
 ECHO DEVELOPMENT
@@ -11,8 +13,7 @@ ECHO 4 - Merge Project Code To Git (WinMerge)
 ECHO.
 ECHO MISC
 ECHO 5 - Deploy
-ECHO 6 - Package
-ECHO 7 - Service
+ECHO 6 - Service
 ECHO 0 - EXIT
 ECHO.
 
@@ -22,8 +23,7 @@ IF %option%==2 GOTO PULL
 IF %option%==3 GOTO STATUS
 IF %option%==4 GOTO MERGE
 IF %option%==5 GOTO DEPLOY
-IF %option%==6 GOTO PACKAGE
-IF %option%==7 GOTO SERVICE
+IF %option%==6 GOTO SERVICE
 IF %option%==0 EXIT
 
 :PUSH
@@ -44,10 +44,6 @@ GOTO MAIN
 
 :DEPLOY
 CALL %INIT_PATH%\bin\deploy.cmd
-GOTO MAIN
-
-:PACKAGE
-CALL %INIT_PATH%\bin\package.cmd
 GOTO MAIN
 
 :SERVICE
