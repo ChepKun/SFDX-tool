@@ -5,6 +5,8 @@ CD /D %INIT_PATH%
 
 ECHO SFDX tool - Main
 ECHO.
+ECHO Your current project path: %PROJECT_PATH%
+ECHO.
 ECHO DEVELOPMENT
 ECHO 1 - Push Project Code
 ECHO 2 - Pull Project Code
