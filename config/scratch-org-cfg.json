@@ -1,0 +1,19 @@
+{
+    "orgName": "Development Org",
+    "edition": "Developer",
+    "hasSampleData": "true",
+    "features": [
+        "Communities",
+        "AuthorApex",
+        "DebugApex"
+    ],
+    "orgPreferences": {
+        "enabled": [
+            "S1DesktopEnabled",
+            "IsQuoteEnabled",
+            "NetworksEnabled",
+            "Translation",
+            "DisableParallelApexTesting"
+        ]
+    }
+}
