@@ -5,6 +5,9 @@ ECHO.
 
 SET /P target=Input username or alias for the target org and press ENTER: 
 
+ECHO.
+
 CALL sfdx force:org:open -u %target%
 
+ECHO.
 PAUSE

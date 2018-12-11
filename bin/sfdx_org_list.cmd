@@ -5,4 +5,5 @@ ECHO.
 
 CALL sfdx force:org:list
 
+ECHO.
 PAUSE

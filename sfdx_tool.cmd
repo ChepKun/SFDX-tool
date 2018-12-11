@@ -2,7 +2,8 @@
 SETLOCAL EnableDelayedExpansion
 
 rem Define Constants
-set CONSTANTS=.\config\constants.ini
+SET INIT_PATH=%0\..\
+SET CONSTANTS=%INIT_PATH%\config\constants.ini
 
 rem We need constants
 IF NOT EXIST %CONSTANTS% GOTO ERROR
@@ -10,14 +11,11 @@ IF NOT EXIST %CONSTANTS% GOTO ERROR
 rem Load constants from file
 FOR /F "delims== tokens=1,2" %%i IN (%CONSTANTS%) DO SET %%i=%%j
 
-rem Break points
+rem Start menu
 
-:MAIN
-CALL ./bin/main.cmd
+CALL %INIT_PATH%\bin\main.cmd
 
-:SERVICE
-CALL ./bin/service.cmd
-GOTO MAIN
+rem Additional break points
 
 :ERROR
 ECHO SFDX tool cannot be started.
