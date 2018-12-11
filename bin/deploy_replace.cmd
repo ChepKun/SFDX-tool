@@ -17,7 +17,7 @@ CALL sfdx force:source:convert -d %TEMP_PATH%
 ECHO.
 
 rem Start deployement
-CALL sfdx force:mdapi:deploy -d %TEMP_PATH% -u %target% -r RunLocalTests
+CALL sfdx force:mdapi:deploy -d %TEMP_PATH% -u %target% -l RunLocalTests -w -1
 
 ECHO.
 PAUSE
