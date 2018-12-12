@@ -1,6 +1,6 @@
 CLS
 
-ECHO SFDX tool - Deploy - Replace Code
+ECHO SFDX tool - Deploy - Replace Code and Run Tests
 ECHO.
 
 SET /P target=Input alias for the target org (or 0 to exit) and press ENTER: 
@@ -17,7 +17,7 @@ CALL sfdx force:source:convert -d %TEMP_PATH%
 ECHO.
 
 rem Start deployement
-CALL sfdx force:mdapi:deploy -d %TEMP_PATH% -u %target% -w -1
+CALL sfdx force:mdapi:deploy -d %TEMP_PATH% -u %target% -l RunLocalTests -w -1
 
 ECHO.
 PAUSE
