@@ -2,6 +2,7 @@
 CLS
 
 ECHO SFDX tool - Custom Scripts
+ECHO.
 ECHO 0 - BACK
 ECHO.
 
