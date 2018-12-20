@@ -4,6 +4,7 @@ SETLOCAL EnableDelayedExpansion
 rem Define Constants
 SET INIT_PATH=%0\..\
 SET CONSTANTS=%INIT_PATH%\config\constants.ini
+SET CUSTOM_SCRIPTS=%INIT_PATH%\bin\custom.cmd
 
 rem We need constants
 IF NOT EXIST %CONSTANTS% GOTO ERROR

@@ -17,6 +17,9 @@ ECHO MISC
 ECHO 5 - Refresh Code From Git
 ECHO 6 - Deploy
 ECHO 7 - Service
+IF EXIST %CUSTOM_SCRIPTS% (
+	ECHO 8 - Custom Scripts
+)
 ECHO 0 - EXIT
 ECHO.
 
@@ -28,6 +31,7 @@ IF %option%==4 GOTO MERGE
 IF %option%==5 GOTO REFRESH
 IF %option%==6 GOTO DEPLOY
 IF %option%==7 GOTO SERVICE
+IF %option%==8 GOTO CUSTOM
 IF %option%==0 EXIT
 
 :PUSH
@@ -56,4 +60,8 @@ GOTO MAIN
 
 :SERVICE
 CALL %INIT_PATH%\bin\service.cmd
+GOTO MAIN
+
+:CUSTOM
+CALL %CUSTOM_SCRIPTS%
 GOTO MAIN
