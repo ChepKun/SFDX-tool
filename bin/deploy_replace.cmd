@@ -16,6 +16,14 @@ CALL sfdx force:source:convert -d %TEMP_PATH%
 
 ECHO.
 
+rem Replace
+CALL %INIT_PATH%\bin\deploy_replacer.cmd
+
+ECHO.
+
+rem Navigate to project folder
+CD /D %PROJECT_PATH%
+
 rem Start deployement
 CALL sfdx force:mdapi:deploy -d %TEMP_PATH% -u %target% -w -1
 
