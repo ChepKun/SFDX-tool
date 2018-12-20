@@ -3,10 +3,17 @@ CLS
 ECHO SFDX tool - Deploy - Replace Code
 ECHO.
 
+IF NOT "%1"=="" (
+	SET target=%1
+	GOTO DEPLOY_START
+)
+
 SET /P target=Input alias for the target org (or 0 to exit) and press ENTER: 
 IF %target%==0 GOTO EXIT
 
 ECHO.
+
+:DEPLOY_START
 
 rem Navigate to project folder
 CD /D %PROJECT_PATH%
